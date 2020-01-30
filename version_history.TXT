@@ -1,0 +1,77 @@
+###############################################################################################################################
+******************************************************* Version history  ******************************************************
+###############################################################################################################################
+
+11-01-2020
+v0.5
+- Alfa-Bank csv export file processing
+- Store dictionaries support
+- Real purchase date extraction (Alfa-Bank only)
+
+15-01-2020
+v0.6
+- Citibank csv export file processing
+- Dictionary addition for Citi-specific messages
+- Input checks and file selection
+- Added "clarifications" and "living" dictionaries
+
+17-01-2020
+v0.65
+- Added "medicine" dictionary
+- File contents are now processed as lists
+- Unprocessed csv entries are saved separately
+
+18-01-2020
+v0.68
+- Minor additions and fixes to dictionaries
+- Output filenames now have datestamps
+- Added file cleanup before running the script
+- Transactions with "hold" status now processed correctly
+
+25-01-2020
+v0.71
+- Format change of output files, to correspond to new "Spendings" format on Google Sheets
+- Added "kazan" and "restaurants" dictionaries
+- Minor additions and fixes to dictionaries
+- Categories added to output files
+
+26-01-2020
+v0.81
+- Input and bank parameter check removed, now the filenames are hardcoded, both input files are processed sequentially
+- Output from both input files flushed into one file for easier reading
+- Unknown entries from both input files flushed into one file for easier reading
+- Alfabank "zero expense" (e.g. cashback) entries now processed correctly
+- Minor additions and fixes to dictionaries
+
+28-01-2020
+v0.83
+- Windows support added
+- File encoding changed to Win-1251
+- CSV Writer "newline" parameter added (required for correct csv generation on Windows)
+- Explicit file closing methods added
+- The "sys" module import removed as not used in the script
+- Minor additions and fixes to dictionaries
+
+30-01-2020
+v0.9B
+Initial version of the GUI tool for Alfabank and Tinkoff csv reporting.
+- Processes csv files for Alfabank, Tinkoff or both at time
+- Dictionary for "Kazan" removed due to irrelevancy
+
+Planned features for further releases:
+- Correct year modification for Alfabank entries (01/01/20 -> 01/01/2020). Currently this works only for year 2020.
+- Correct sorting by date (may be done in the resulting csv file, with transactions from both banks merged)
+- Visual interface (optional, probably not needed)
+- Support of Gmail SMS log extraction (optional, probably not needed)
+- Interest calculations
+- Database connection for storing information
+
+Notes:
+- Version 0.68 was the first version to be used as "production" - the data from the reports produced by it was actually added to "Spendings 2019" on Google Sheets.
+- Version 0.71 was the first version to be used with the new "Spendings" format on Google Sheets, developed and adopted in Jan 2020 for year 2020 and onwards.
+- Version 0.83 for Windows is based on v0.81 for Linux, having all the functions of it. Future versions will be released in parallel.
+- Version 0.9B is the first GUI release of the tool. "B" for Alfabank and Tinkoff supporting version. "A" for Citibank and Alfabank supporting version. Probably the versions to be merged in the future.
+
+###############################################################################################################################
+******************************************************* End of document *******************************************************
+###############################################################################################################################
